@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Mumbai Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Facts About Mumbai</h1>
+        <button id="generateFact">Generate Fact</button>
+        <p id="fact"></p>
+    </div>
+    <script>
+        const facts = [
+            "Mumbai is often referred to as the financial capital of India.",
+            "It is one of the most populous cities in the world, with a population of over 20 million people.",
+            "Mumbai is known for its cultural diversity, with people from various ethnicities and backgrounds.",
+            "The city is the heart of the Indian film industry, popularly known as Bollywood.",
+            "The Gateway of India was built in 1924 to commemorate the visit of King George V and Queen Mary.",
+            "Marine Drive is famous for its stunning views of the Arabian Sea.",
+            "Mumbai is home to several UNESCO World Heritage Sites, including the Chhatrapati Shivaji Maharaj Terminus.",
+            "The city's dabbawalas are famous for their efficient lunchbox delivery system.",
+            "Mumbai contributes significantly to India's GDP, with a diverse economy.",
+            "The city has an extensive public transport system, including local trains and buses."
+        ];
+
+        document.getElementById('generateFact').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
